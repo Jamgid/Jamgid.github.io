@@ -97,7 +97,7 @@ button[disabled] {
   float: right;
 }
 
-#password {
+#display {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -116,6 +116,9 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+}
+#slider {
+    width: 100%;
 }
 
 @media (max-width: 690px) {
