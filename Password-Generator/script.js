@@ -16,7 +16,7 @@ function generate() {
   
 
 }
-
+//Reactive display of slider value
 document.getElementById("length").innerHTML = "Length: 68";
 
 document.getElementById("slider").oninput = function(){
