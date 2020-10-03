@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
+    <!--link to CSS file-->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,10 +18,13 @@
           <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
+          <!--where password will appear-->
           <input type="text" id="display" placeholder="Your Password Goes Here">
+          <!--slider to choose password length-->
           <input type="range" min="8" max="128" name="slider" id="slider">
         </div>
         <div class="card-footer">
+          <!--button to generate password-->
           <button onclick="generate()" class="btn">Generate Password</button>  
         </div>
       </div>
