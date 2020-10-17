@@ -1,0 +1,20 @@
+body {
+    background-image: linear-gradient(120deg,#7848b0,#271f9e);
+}
+
+.blocks {
+    color: black;
+}
+
+p, button {
+    font-size: 30px;
+    background-color: rgb(52, 179, 2);
+    border-style: solid;
+    border-color:black;
+    box-shadow: 0 0 10px 2px;
+}
+
+textarea, input {
+    font-size: 12px;
+    background-color: rgb(52, 179, 2);
+}

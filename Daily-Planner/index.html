@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <h2 class="lead">A simple calendar app for scheduling your work day</h2>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here -->
+        <div class="blocks">
+            <div class="row block" id="">
+            <p class="col-2 blockTime">9AM</p>
+            <input type="text" class="col-1 blockLocation" id="b9" placeholder="Location">
+              <textarea class="col-8 blockMessage" id="9" cols="30" rows="3" placeholder="Enter event"></textarea>
+              <button class="col-1 submit">Add<i id="save" class="far fa-save"></i></button>
+            </div>
+            <div class="row block" id="">
+            <p class="col-2 blockTime">10AM</p>
+            <input type="text" class="col-1 blockLocation" id="b10" placeholder="Location">
+              <textarea class="col-8 blockMessage" id="10" cols="30" rows="3" placeholder="Enter event"></textarea>
+              <button class="col-1 submit">Add<i id="save" class="far fa-save"></i></button>
+            </div>
+            <div class="row block" id="">
+            <p class="col-2 blockTime">11AM</p>
+            <input type="text" class="col-1 blockLocation" id="b11" placeholder="Location">
+              <textarea class="col-8 blockMessage" id="11" cols="30" rows="3" placeholder="Enter event"></textarea>
+              <button class="col-1 submit">Add<i id="save" class="far fa-save"></i></button>
+            </div>
+            <div class="row block" id="">
+            <p class="col-2 blockTime">12PM</p>
+            <input type="text" class="col-1 blockLocation" id="b12" placeholder="Location">
+              <textarea class="col-8 blockMessage" id="12" cols="30" rows="3" placeholder="Enter event"></textarea>
+              <button class="col-1 submit">Add<i id="save" class="far fa-save"></i></button>
+            </div>
+            <div class="row block" id="">
+            <p class="col-2 blockTime">1PM</p>
+            <input type="text" class="col-1 blockLocation" id="b13" placeholder="Location">
+              <textarea class="col-8 blockMessage" id="13" cols="30" rows="3" placeholder="Enter event"></textarea>
+              <button class="col-1 submit">Add<i id="save" class="far fa-save"></i></button>
+            </div>
+            <div class="row block" id="">
+            <p class="col-2 blockTime">2PM</p>
+            <input type="text" class="col-1 blockLocation" id="b14" placeholder="Location">
+              <textarea class="col-8 blockMessage" id="14" cols="30" rows="3" placeholder="Enter event"></textarea>
+              <button class="col-1 submit">Add<i id="save" class="far fa-save"></i></button>
+            </div>
+            <div class="row block" id="">
+            <p class="col-2 blockTime">3PM</p>
+            <input type="text" class="col-1 blockLocation" id="b15" placeholder="Location">
+              <textarea class="col-8 blockMessage" id="15" cols="30" rows="3" placeholder="Enter event"></textarea>
+              <button class="col-1 submit">Add<i id="save" class="far fa-save"></i></button>
+            </div>
+            <div class="row block" id="">
+            <p class="col-2 blockTime">4PM</p>
+            <input type="text" class="col-1 blockLocation" id="b16" placeholder="Location">
+              <textarea class="col-8 blockMessage" id="16" cols="30" rows="3" placeholder="Enter event"></textarea>
+              <button class="col-1 submit">Add<i id="save" class="far fa-save"></i></button>
+            </div>
+            <div class="row block" id="">
+            <p class="col-2 blockTime">5PM</p>
+            <input type="text" class="col-1 blockLocation" id="b17" placeholder="Location">
+              <textarea class="col-8 blockMessage" id="17" cols="30" rows="3" placeholder="Enter event"></textarea>
+              <button class="col-1 submit">Add<i id="save" class="far fa-save"></i></button>
+            </div>
+        </div>
+    
+        
+    
+    
+    
+    
+    </div>
+
+    <script type="text/javascript">
+     
+      var currentDay = $("#currentDay");
+      
+      var currentTime = moment().format('MMMM Do YYYY');
+
+      currentDay.append(currentTime);
+
+      var blockMessage = $(".blockMessage");
+      
+      var blockLocation = $(".blockLocation");
+
+      var save = $("#save");
+      
+      $("button").on("click", function(){
+        $("button").append(save);
+        save.removeClass("hide");
+      })
+      
+
+           
+      $("button").click(function(event){
+        var key = blockLocation.val();
+        var value = blockMessage.val();
+        alert(key + ": " + "*" + value + "*" + " added");
+        if (key && value) {
+        localStorage.setItem(key, value);
+    }
+});
+//Display scores(not displaying right but shows in console)
+for (let i = 0; i < localStorage.length; i++) {
+    
+    var key = localStorage.key[i];
+    
+    var value = localStorage.getItem(key);
+
+    blockMessage.text += `${i+1}- ${key}: ${JSON.stringify(value)}<br/>`;
+}
+      
+        
+      
+      
+      var locations = [
+      $("#b9").val(),$("#b10").val(),$("#b11").val(),
+      $("#b12").val(),$("#b13").val(),$("#b14").val(),
+      $("#b15").val(),$("#b16").val(),$("#b17").val()];    
+
+  
+      var toDos = [
+      $("#9").val(),$("#10").val(),$("#11").val(),
+      $("#12").val(),$("#13").val(),$("#14").val(),
+      $("#15").val(),$("#16").val(),$("#17").val()];    
+
+      
+     
+
+      
+  
+  
+
+
+        
+      
+    
+    
+    
+    
+    
+    
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  </body>
+</html>
