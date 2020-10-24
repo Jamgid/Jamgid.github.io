@@ -10,6 +10,7 @@ var questionContainer = document.querySelector("#question-container");
 var questionElement = document.querySelector("#question");
 var answerElement = document.querySelector("#answer-buttons");
 var randomQuestions, currentQuestionIndex;
+var storageContent = [];
 
 //Button event listeners
 startButton.addEventListener("click", startQuiz);
@@ -121,18 +122,31 @@ function submit() {
     var value = score.value;
 
     if (key && value) {
-        localStorage.setItem(key, value);
+        var hscore = JSON.parse(localStorage.getItem("hscores")) || []
+        var x = {
+            name: key,
+            score: value
+        }
+        hscore.push(x)
+
+        localStorage.setItem("hscores", JSON.stringify(hscore));
+
+        scores.textContent = JSON.stringify(hscore[0].name) + ": " + JSON.stringify(hscore[0].score)
+    
+        for (let i = 0; i < hscore.length; i++) {
+            //P tag to store each one of the textCOntent of the user score
+            scores.textContent = JSON.stringify(hscore[i].name) + ": " + JSON.stringify(hscore[i].score)
+
+            //append that p tag to scores
+            
+            //scores.innerHTML += `${i+1}- ${key}: ${JSON.stringify(value)}<br/>`;
+        }
     }
 };
-//Display scores(not displaying right but shows in console)
-for (let i = 0; i < localStorage.length; i++) {
-    
-    const key = localStorage.key[i];
-    
-    const value = localStorage.getItem(key);
 
-    scores.innerHTML += `${i+1}- ${key}: ${JSON.stringify(value)}<br/>`;
-}
+
+//Display scores(not displaying right but shows in console)
+
 
 
 //Questions array
