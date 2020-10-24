@@ -15,8 +15,8 @@ Weather report for whatever city the user enters in the input box, displaying:
 - History of past searches 
 
 ### Links
-Link to deployed site: https://jamgid.github.io/Weather-Dashboard/ 
-Link to Github repository:https://github.com/Jamgid/Weather-Dashboard
+- Link to deployed site: https://jamgid.github.io/Weather-Dashboard/ 
+- Link to Github repository:https://github.com/Jamgid/Weather-Dashboard
 
 ![Screenshot of page](https://user-images.githubusercontent.com/69053531/97061840-53b2b400-1566-11eb-9ff1-ad7339f3676e.png)
 
