@@ -1,0 +1,9 @@
+/*Change all the text on each page to the imported font from google*/
+*{
+    font-family: 'Oswald', sans-serif;
+}    
+/*A background design for the container*/
+.container{    
+    background-image: url("https://cdn1.vectorstock.com/i/1000x1000/20/45/web-page-background-square-vector-4662045.jpg");
+    margin-bottom: 30px;
+}
