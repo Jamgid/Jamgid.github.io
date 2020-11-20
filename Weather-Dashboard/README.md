@@ -14,21 +14,16 @@ Weather report for whatever city the user enters in the input box, displaying:
 - 5-day future forecast
 - History of past searches 
 
-
-* Here you can run the application using the following URL:  
+### Links
+- Link to deployed site: https://jamgid.github.io/Weather-Dashboard/ 
+- Link to Github repository:https://github.com/Jamgid/Weather-Dashboard
 
 ![Screenshot of page](https://user-images.githubusercontent.com/69053531/97061840-53b2b400-1566-11eb-9ff1-ad7339f3676e.png)
 
 
-* Credits
+### Credits
 
-  .https://openweathermap.org/api
-  .https://getbootstrap.com/docs/4.5/getting-started/introduction/
-  .https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
-  .https://fontawesome.com/
-
-
-
-
-
-
+  - https://openweathermap.org/api
+  - https://getbootstrap.com/docs/4.5/getting-started/introduction/
+  - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+  - https://fontawesome.com/
