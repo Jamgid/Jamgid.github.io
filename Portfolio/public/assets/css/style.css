@@ -7,3 +7,19 @@
     background-image: url("https://cdn1.vectorstock.com/i/1000x1000/20/45/web-page-background-square-vector-4662045.jpg");
     margin-bottom: 30px;
 }
+
+.img-fluid{
+    margin-bottom: 20px;
+}
+
+.yellow{
+    color: gold;
+}
+
+.blue{
+    color: royalblue;
+}
+
+.about-body{
+    font-size: large;
+}
