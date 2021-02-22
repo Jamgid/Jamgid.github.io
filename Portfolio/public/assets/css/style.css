@@ -4,8 +4,14 @@
 }    
 /*A background design for the container*/
 .container{    
-    background-image: url("https://cdn1.vectorstock.com/i/1000x1000/20/45/web-page-background-square-vector-4662045.jpg");
-    margin-bottom: 30px;
+    background-image: url("../images/bg-design.jpg");
+
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    float: left;
 }
 
 .img-fluid{
@@ -20,6 +26,18 @@
     color: royalblue;
 }
 
+a {
+    color: rgb(66, 66, 255);
+}
+
 .about-body{
     font-size: large;
+}
+
+div.p-3.mb-2.text-center, footer {
+    background:linear-gradient(45deg, blue, lightblue);
+}
+
+nav.navbar.navbar-expand-lg.navbar-light, footer {
+    font-size: 20px;
 }
