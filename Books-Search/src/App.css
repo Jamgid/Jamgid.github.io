@@ -1,0 +1,21 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header, footer{
+    text-align: center;
+    height: 45px;
+    font-size: 22px;
+    background:linear-gradient(45deg, rgba(0, 0, 255, 0.863), rgb(214, 173, 230));
+}
+
+form{
+    margin-top: 25px;
+    text-align: center;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    float: left;
+}
